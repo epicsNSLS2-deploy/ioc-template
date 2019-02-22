@@ -7,7 +7,7 @@
 epicsEnvSet("ARCH",	"linux-x86_64")
 epicsEnvSet("IOC",      "iocADProsilica")
 epicsEnvSet("TOP",	"${PWD}")	# defined here not in  unique.cmd
-#epicsEnvSet("SUPPORT", "/epics/prod/Deb7/master")
+#epicsEnvSet("SUPPORT", "/epics/prod/Deb7/R3-4")
 epicsEnvSet("SUPPORT", 	"$(SUPPORT_DIR)")
 
 epicsEnvSet("ASYN", 	   "$(SUPPORT)/asyn")
@@ -19,11 +19,13 @@ epicsEnvSet("SSCAN", 	   "$(SUPPORT)/sscan")
 epicsEnvSet("DEVIOCSTATS", "$(SUPPORT)/iocStats")
 epicsEnvSet("EPICS_BASE",  "$(SUPPORT)/base")
 
-epicsEnvSet("AREA_DETECTOR", "$(SUPPORT)/areaDetector")
-epicsEnvSet("ADSUPPORT",     "$(AREA_DETECTOR)/ADSupport")
-epicsEnvSet("ADCORE", 	     "$(AREA_DETECTOR)/ADCore")
-epicsEnvSet("ADPLUGINBAR",   "$(AREA_DETECTOR)/ADPluginBar")
+epicsEnvSet("AREA_DETECTOR",  "$(SUPPORT)/areaDetector")
+epicsEnvSet("ADSUPPORT",      "$(AREA_DETECTOR)/ADSupport")
+epicsEnvSet("ADCORE", 	      "$(AREA_DETECTOR)/ADCore")
+epicsEnvSet("ADPLUGINBAR",    "$(AREA_DETECTOR)/ADPluginBar")
 epicsEnvSet("ADPLUGINEDGE",   "$(AREA_DETECTOR)/ADPluginEdge")
+epicsEnvSet("ADCOMPVISION",   "$(AREA_DETECTOR)/ADCompVision")
+
 
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")
 
@@ -35,5 +37,5 @@ epicsEnvSet("ADMERLIN",       "$(AREA_DETECTOR)/ADMerlin")
 epicsEnvSet("ADEIGER",        "$(AREA_DETECTOR)/ADEiger")
 epicsEnvSet("ADANDOR3",       "$(AREA_DETECTOR)/ADAndor3")
 epicsEnvSet("ADPOINTGREY",    "$(AREA_DETECTOR)/ADPointGrey")
-
+epicsEnvSet("ADUVC",          "$(AREA_DETECTOR)/ADUVC")
 
