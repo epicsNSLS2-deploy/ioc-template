@@ -26,7 +26,7 @@ prosilicaConfig("$(PORT)", "$(CAM-IP)",  50, 0)
 asynSetTraceIOMask("$(PORT)",0,2)
 #asynSetTraceMask("$(PORT)",0,255)
 
-dbLoadRecords("align.db",   "P=$(PREFIX),R=")
+#dbLoadRecords("align.db",   "P=$(PREFIX),R=")
 
 dbLoadRecords("$(ADPROSILICA)/db/prosilica.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 
