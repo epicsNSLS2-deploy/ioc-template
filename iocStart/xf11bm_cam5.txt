@@ -93,9 +93,7 @@ Warning: IOC is booting with TOP = "/epics/iocs/cam05"
 prosilicaConfig("CAM", "10.11.129.34",  50, 0)
 asynSetTraceIOMask("CAM",0,2)
 #asynSetTraceMask("$(PORT)",0,255)
-dbLoadRecords("align.db",   "P=XF:11BMB-BI{OnAxis-Cam:1},R=")
-filename="../../../src/ioc/dbStatic/dbLexRoutines.c" line number=264
-No such file or directory dbRead opening file align.db
+#dbLoadRecords("align.db",   "P=$(PREFIX),R=")
 dbLoadRecords("/epics/prod/Deb7/R3-4/areaDetector/ADProsilica/db/prosilica.template","P=XF:11BMB-BI{OnAxis-Cam:1},R=cam1:,PORT=CAM,ADDR=0,TIMEOUT=1")
 # Create a standard arrays plugin, set it to get data from first Prosilica driver.
 NDStdArraysConfigure("Image1", 5, 0, "CAM", 0, 0)
@@ -361,7 +359,7 @@ Error at or before ")" in path "/epics/prod/Deb7/R3-4/areaDetector/ADCore/db"  f
  in path "/epics/prod/Deb7/R3-4/areaDetector/ADCore/db"  file "NDPva.template" line 7
 # Must start PVA server if this is enabled
 startPVAServer
-2019-02-22T12:28:06.315 Using dynamically assigned TCP port 51229.
+2019-02-22T12:42:50.642 Using dynamically assigned TCP port 55422.
 # Optional: load ffmpegServer plugin
 #ffmpegServerConfigure(8081)
 #ffmpegStreamConfigure("FfmStream1", 2, 0, "$(PORT)", 0, -1, 0)
@@ -387,10 +385,10 @@ dbLoadRecords("/epics/prod/Deb7/R3-4/iocStats/db/iocAdminSoft.db", "IOC=XF:11BMB
 #dbLoadRecords("$(ALIVE)/aliveApp/Db/alive.db", "P=$(PREFIX),RHOST=192.168.1.254")
 # The following was auto-inserted by installSynApps
 NDCVConfigure("CV1", 20, 0, "CAM", 0, 0, 0, 0)
-2019/02/22 12:28:06.320 NDPluginCV::assignInputs Finished assigning input values
-2019/02/22 12:28:06.320 NDPluginCV::assignOutputs Finished assigning output values
-2019/02/22 12:28:06.320 NDPluginCV::assignInputDescriptions Finished assigning input desc values
-2019/02/22 12:28:06.320 NDPluginCV::assignOutputDescriptions Finished assigning output desc values
+2019/02/22 12:42:50.647 NDPluginCV::assignInputs Finished assigning input values
+2019/02/22 12:42:50.647 NDPluginCV::assignOutputs Finished assigning output values
+2019/02/22 12:42:50.647 NDPluginCV::assignInputDescriptions Finished assigning input desc values
+2019/02/22 12:42:50.647 NDPluginCV::assignOutputDescriptions Finished assigning output desc values
 macLib: macro ADCOMPVISION is undefined (expanding string dbLoadRecords("$(ADCOMPVISION)/db/NDCV.template", "P=$(PREFIX), R=CV1:, PORT=CV1, ADDR=0, TIMEOUT=1, NDARRAY_PORT=$(PORT), NAME=CV1, NCHANS=$(XSIZE)"))
 macLib: macro ADCOMPVISION is undefined (expanding string set_requestfile_path("$(ADCOMPVISION)/adcvApp/Db"))
 NDBarConfigure("BAR1", 20, 0, "CAM", 0, 0, 0, 0)
@@ -427,7 +425,7 @@ reboot_restore: Found filename 'auto_settings.sav' in restoreFileList.
 reboot_restore: done with file 'auto_settings.sav'
 
 cas warning: Configured TCP port was unavailable.
-cas warning: Using dynamically assigned TCP port 58353,
+cas warning: Using dynamically assigned TCP port 39227,
 cas warning: but now two or more servers share the same UDP port.
 cas warning: Depending on your IP kernel this server may not be
 cas warning: reachable with UDP unicast (a host's IP in EPICS_CA_ADDR_LIST)
@@ -455,8 +453,3 @@ dbl > ./records.dbl
 #system "cp ./records.dbl /cf-update/$(HOSTNAME).$(IOCNAME).dbl"
 # dbpf "$(PREFIX)cam1:GevSCPSPacketSiz", "8228"
 epics> auto_settings.sav: 1227 of 1227 PV's connected
-
-epics> exit
-Disconnecting camera CAM
-Uninitializing PvAPI
-softioc@xf11bm-ioc1:~/cam05$ 
