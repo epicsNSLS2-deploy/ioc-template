@@ -1,9 +1,9 @@
-#!/epics/support/areaDetector/ADProsilica/iocs/prosilicaIOC/bin/linux-x86_64/prosilicaApp st.cmd
+#!/epics/prod/Deb7/R3-4/areaDetector/ADProsilica/iocs/prosilicaIOC/bin/linux-x86_64/prosilicaApp st.cmd
 errlogInit(20000)
 
 < unique.cmd
-< envPaths
-#< /epics/prod/envPaths
+#< envPaths
+< /epics/prod/Deb7/R3-4/envPaths
 
 dbLoadDatabase("$(ADPROSILICA)/iocs/prosilicaIOC/dbd/prosilicaApp.dbd")
 prosilicaApp_registerRecordDeviceDriver(pdbbase)
