@@ -16,7 +16,7 @@
 
 #10.10.1.85: 00-0f-31-02-18-04	02-2623A-07000  GT3300C      137220	OnAxis  xf10idd-cam5
 
-epicsEnvSet("SUPPORT_DIR", "/epics/prod/Deb7/master")
+epicsEnvSet("SUPPORT_DIR", "/epics/prod/Deb7/R3-4")
 
 epicsEnvSet("ENGINEER",                 "K. Gofron X5283")
 epicsEnvSet("LOCATION",                 "10IDD")
