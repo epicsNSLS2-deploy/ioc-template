@@ -1,4 +1,4 @@
-#!/epics/prod/Deb7/R3-4/areaDetector/ADProsilica/iocs/prosilicaIOC/bin/linux-x86_64/adUVCApp st.cmd
+#!/epics/prod/Deb7/R3-4/areaDetector/ADUVC/iocs/adUVCIOC/bin/linux-x86_64/adUVCApp st.cmd
 
 < unique.cmd
 errlogInit(20000)
