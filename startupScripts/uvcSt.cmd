@@ -6,7 +6,7 @@ errlogInit(20000)
 < /epics/prod/Deb7/R3-4/envPaths
 
 #epicsThreadSleep(20)
-dbLoadDatabase("$(TOP)/dbd/adUVCApp.dbd")
+dbLoadDatabase("$(ADUVC)/iocs/adUVCIOC/dbd/adUVCApp.dbd")
 adUVCApp_registerRecordDeviceDriver(pdbbase) 
 
 #/*
