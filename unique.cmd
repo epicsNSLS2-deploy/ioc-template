@@ -16,7 +16,7 @@
 
 #10.10.1.85: 00-0f-31-02-18-04	02-2623A-07000  GT3300C      137220	OnAxis  xf10idd-cam5
 
-epicsEnvSet("SUPPORT_DIR", "/epics/prod/Deb7/R3-4")
+epicsEnvSet("SUPPORT_DIR", "/epics/support")
 
 epicsEnvSet("ENGINEER",                 "K. Gofron X5283")
 epicsEnvSet("LOCATION",                 "10IDD")
@@ -42,3 +42,5 @@ epicsEnvSet("NELMT",                    "4177920")
 epicsEnvSet("NDTYPE",                   "Int16")  #'Int8' (8bit B/W, Color) | 'Int16' (16bit B/W)
 epicsEnvSet("NDFTVL",                   "SHORT") #'UCHAR' (8bit B/W, Color) | 'SHORT' (16bit B/W)
 epicsEnvSet("CBUFFS",                   "500")
+# The framerate at which the stream will operate (used by UVC camera)
+epicsEnvSet("FRAMERATE",     	    	"30");
