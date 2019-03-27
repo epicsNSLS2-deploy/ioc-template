@@ -16,29 +16,30 @@
 
 #10.10.1.85: 00-0f-31-02-18-04	02-2623A-07000  GT3300C      137220	OnAxis  xf10idd-cam5
 
-epicsEnvSet("SUPPORT_DIR", "/epics/support")
+epicsEnvSet("SUPPORT_DIR", "/epics/Deb8")
 
 epicsEnvSet("ENGINEER",                 "K. Gofron X5283")
 epicsEnvSet("LOCATION",                 "10IDD")
-epicsEnvSet("PORT",                     "CAM")
+epicsEnvSet("PORT",                     "LAMBDA1")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST",  "NO")
 epicsEnvSet("EPICS_CA_ADDR_LIST",       "10.10.0.255")
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "6000000")
 
-epicsEnvSet("CAM-IP",                   "10.10.1.91")
+#epicsEnvSet("CAM-IP",                   "10.10.1.91")
+epicsEnvSet("CONFIGURATION_PATH",	"/opt/xsp/config")
 #epicsEnvSet("UID-NUM",                 "137220")
-epicsEnvSet("PREFIX",                   "XF:10IDC-BI{GC1380-Cam:1}")
-epicsEnvSet("CTPREFIX",                 "XF:10IDD-BI{GC1380-Cam:1}")
-epicsEnvSet("HOSTNAME",                 "xf10idd-ioc1")
-epicsEnvSet("IOCNAME",                  "cam-gc1380")
+epicsEnvSet("PREFIX",                   "XF:10IDC-BI{Lambda-Cam:1}")
+epicsEnvSet("CTPREFIX",                 "XF:10IDC-BI{Lambda-Cam:1}")
+epicsEnvSet("HOSTNAME",                 "xf10idd-ioc3")
+epicsEnvSet("IOCNAME",                  "cam-lambda")
 
-epicsEnvSet("QSIZE",                    "20")
+epicsEnvSet("QSIZE",                    "30")
 epicsEnvSet("NCHANS",                   "2048")
 epicsEnvSet("HIST_SIZE",                "4096")
-epicsEnvSet("XSIZE",                    "1360")
-epicsEnvSet("YSIZE",                    "1024")
-epicsEnvSet("NELMT",                    "4177920")
+epicsEnvSet("XSIZE",                    "256")
+epicsEnvSet("YSIZE",                    "256")
+epicsEnvSet("NELMT",                    "65536")
 epicsEnvSet("NDTYPE",                   "Int16")  #'Int8' (8bit B/W, Color) | 'Int16' (16bit B/W)
 epicsEnvSet("NDFTVL",                   "SHORT") #'UCHAR' (8bit B/W, Color) | 'SHORT' (16bit B/W)
 epicsEnvSet("CBUFFS",                   "500")
