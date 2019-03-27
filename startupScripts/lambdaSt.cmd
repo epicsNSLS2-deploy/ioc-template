@@ -5,7 +5,7 @@ errlogInit(20000)
 
 < envPaths
 #epicsThreadSleep(20)
-dbLoadDatabase("$(TOP)/dbd/LambdaApp.dbd")
+dbLoadDatabase("$(SUPPORT)/areaDetector/ADLambda/iocs/LambdaIOC/dbd/LambdaApp.dbd")
 LambdaApp_registerRecordDeviceDriver(pdbbase) 
 
 # Prefix for all records
