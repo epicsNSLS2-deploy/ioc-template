@@ -31,9 +31,9 @@ adUVCApp_registerRecordDeviceDriver(pdbbase)
 #epicsThreadSleep(2)
 
 # If searching for device by product ID put "" or empty string for serial number
-#ADUVCConfig("$(PORT)", "", 25344, $(FRAMERATE), $(XSIZE), $(YSIZE), 0, 0, 0, 0)
+ADUVCConfig("$(PORT)", "", $(CAM-ID), $(FRAMERATE), $(XSIZE), $(YSIZE), 0, 0, 0, 0)
 #ADUVCConfig("$(PORT)", "", 49240, $(FRAMERATE), $(XSIZE), $(YSIZE), 0, 0, 0, 0)
-ADUVCConfig("$(PORT)", "", 49490, $(FRAMERATE), $(XSIZE), $(YSIZE), 0, 0, 0, 0)
+#ADUVCConfig("$(PORT)", "", 49490, $(FRAMERATE), $(XSIZE), $(YSIZE), 0, 0, 0, 0)
 epicsThreadSleep(2)
 
 asynSetTraceIOMask($(PORT), 0, 2)
