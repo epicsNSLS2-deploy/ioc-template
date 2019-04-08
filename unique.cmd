@@ -26,6 +26,7 @@ epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST",  "NO")
 epicsEnvSet("EPICS_CA_ADDR_LIST",       "10.10.0.255")
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "6000000")
 
+epicsEnvSet("CAM-ID",                   "25344")
 #epicsEnvSet("CAM-IP",                   "10.10.1.91")
 epicsEnvSet("CONFIGURATION_PATH",	"/opt/xsp/config")
 #epicsEnvSet("UID-NUM",                 "137220")
