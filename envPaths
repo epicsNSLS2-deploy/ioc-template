@@ -5,7 +5,7 @@
 # ################################################
 
 epicsEnvSet("ARCH",	"linux-x86_64")
-epicsEnvSet("IOC",      "iocADProsilica")
+#epicsEnvSet("IOC",      "iocADProsilica")
 epicsEnvSet("TOP",	"${PWD}")	# defined here not in  unique.cmd
 #epicsEnvSet("SUPPORT", "/epics/prod/Deb7/R3-4")
 epicsEnvSet("SUPPORT", 	"$(SUPPORT_DIR)")
@@ -25,7 +25,7 @@ epicsEnvSet("ADCORE", 	      "$(AREA_DETECTOR)/ADCore")
 epicsEnvSet("ADPLUGINBAR",    "$(AREA_DETECTOR)/ADPluginBar")
 epicsEnvSet("ADPLUGINEDGE",   "$(AREA_DETECTOR)/ADPluginEdge")
 epicsEnvSet("ADCOMPVISION",   "$(AREA_DETECTOR)/ADCompVision")
-
+epicsEnvSet("ADPLUGINDMTX",   "$(AREA_DETECTOR)/ADPluginDmtx")
 
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")
 

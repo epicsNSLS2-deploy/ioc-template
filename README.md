@@ -18,9 +18,10 @@ logs | directory contatining IOC startup issues and log dumps
 
 To use the ioc-template, start by cloning this repository, or downloading a release.
 
-Then perform the followig steps in order:
+Then perform the following steps in order:
 * Remove the st.cmd file and copy one from the `startupScripts` directory that is appropriate for the IOC in use.
 * Check to make sure that the startup script is pointing to the correct binary location. This will be in the first line of the startup script.
+* Also in the startup script find the call to CAMERAConfig, where CAMERA is the name of the driver in use. Find what macro is used to connect to the camera.
 * Edit the `unique.cmd` file, editing all relevant environment variables to match with your IOC.
 * If using mercurial, initialize the hg repository, add, commit, and push the contents to a remote
 * Start the IOC by running `./st.cmd`, or if required, first run the dependency script.
