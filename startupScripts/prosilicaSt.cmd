@@ -21,7 +21,7 @@ prosilicaApp_registerRecordDeviceDriver(pdbbase)
 #prosilicaConfig("$(PORT)", "$(UID-NUM)", 50, 0)
 #prosilicaConfig("$(PORT)", "$(CAM-IP)", -1, -1)
 #prosilicaConfig("$(PORT)", "$(CAM-IP)",  50, 0, 0, 0, 10)
-prosilicaConfig("$(PORT)", "$(CAM-IP)",  50, 0)
+prosilicaConfig("$(PORT)", "$(CAM-CONNECT)",  50, 0)
 
 asynSetTraceIOMask("$(PORT)",0,2)
 #asynSetTraceMask("$(PORT)",0,255)

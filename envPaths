@@ -1,13 +1,5 @@
-# ################################################
-# Specific to EPICS AD distribution, not camera  #
-# Date:   2018-08-22   		     	 	 #
-# Author: K. Gofron				 #	
-# ################################################
-
 epicsEnvSet("ARCH",	"linux-x86_64")
-#epicsEnvSet("IOC",      "iocADProsilica")
 epicsEnvSet("TOP",	"${PWD}")	# defined here not in  unique.cmd
-#epicsEnvSet("SUPPORT", "/epics/prod/Deb7/R3-4")
 epicsEnvSet("SUPPORT", 	"$(SUPPORT_DIR)")
 
 epicsEnvSet("ASYN", 	   "$(SUPPORT)/asyn")

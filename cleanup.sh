@@ -11,4 +11,5 @@ rm -rf startupScripts/
 rm -rf logs/
 rm README.md
 mkdir autosave
+rm *OLD*
 rm cleanup.sh
