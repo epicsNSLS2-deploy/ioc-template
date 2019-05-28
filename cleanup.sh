@@ -6,6 +6,10 @@
 # Author: Jakub Wlodek
 #
 
+# Make sure we are in the correct dir
+cd "${0%/*}"
+
+# Remove erroneous files/dirs
 rm -rf dependancyScripts/
 rm -rf startupScripts/
 rm -rf logs/
