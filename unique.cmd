@@ -15,7 +15,6 @@ epicsEnvSet("SUPPORT_DIR", "/epics/Deb8")
 epicsEnvSet("ENGINEER",                 "K. Gofron X5283")
 
 # IOC Information
-epicsEnvSet("LOCATION",                 "10IDD")
 epicsEnvSet("PORT",                     "LAMBDA1")
 epicsEnvSet("IOC",                      "iocADUVC")
 
