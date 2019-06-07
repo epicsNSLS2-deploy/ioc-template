@@ -1,4 +1,4 @@
-#!/epics/Deb8/areaDetector/ADLambda/iocs/LambdaIOC/bin/linux-x86_64/LambdaApp st.cmd
+#!/epics/Deb8/areaDetector/ADLambda/iocs/LambdaIOC/bin/linux-x86_64/LambdaApp
 
 < unique.cmd
 errlogInit(20000)

@@ -1,4 +1,4 @@
-#!/epics/prod/Deb7/R3-4/areaDetector/ADProsilica/iocs/prosilicaIOC/bin/linux-x86_64/prosilicaApp st.cmd
+#!/epics/prod/Deb7/R3-4/areaDetector/ADProsilica/iocs/prosilicaIOC/bin/linux-x86_64/prosilicaApp
 errlogInit(20000)
 
 < unique.cmd

@@ -1,4 +1,4 @@
-#!/epics/prod/Deb8/master/areaDetector/ADAndor3/iocs/andor3IOC/bin/linux-x86_64/andor3App st.cmd
+#!/epics/prod/Deb8/master/areaDetector/ADAndor3/iocs/andor3IOC/bin/linux-x86_64/andor3App
 errlogInit(20000)
 
 < /epics/prod/Deb8/master/envPaths
