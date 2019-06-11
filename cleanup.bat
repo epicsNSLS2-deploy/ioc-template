@@ -8,6 +8,6 @@ rmdir /s /q autosaveFiles\
 rmdir /s /q logs\
 
 mkdir autosave
-rm *OLD*
-rm cleanup.sh
-rm cleanup.bat
+del *OLD*
+del cleanup.sh
+del cleanup.bat
