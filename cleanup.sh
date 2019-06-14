@@ -10,7 +10,7 @@
 cd "${0%/*}"
 
 # Remove erroneous files/dirs
-rm -rf dependancyScripts/
+rm -rf dependancyFiles/
 rm -rf startupScripts/
 rm -rf autosaveFiles/
 rm -rf logs/

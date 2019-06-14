@@ -2,7 +2,7 @@
 
 cd /D "%~dp0"
 
-rmdir /s /q dependancyScripts\
+rmdir /s /q dependancyFiles\
 rmdir /s /q startupScripts\
 rmdir /s /q autosaveFiles\
 rmdir /s /q logs\
