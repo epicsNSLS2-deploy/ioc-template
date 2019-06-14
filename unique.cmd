@@ -46,4 +46,4 @@ epicsEnvSet("NDFTVL",                   "SHORT") #'UCHAR' (8bit B/W, Color) | 'S
 epicsEnvSet("CBUFFS",                   "500")
 
 # The framerate at which the stream will operate (used by UVC camera)
-epicsEnvSet("FRAMERATE",     	    	"30");
+epicsEnvSet("FRAMERATE",                "30");
