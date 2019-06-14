@@ -4,7 +4,7 @@
 < envPaths
 errlogInit(20000)
 
-dbLoadDatabase("$(TOP)/dbd/pointGreyApp.dbd")
+dbLoadDatabase("$(ADPOINTGREY)/iocs/pointGreyIOC/dbd/pointGreyApp.dbd")
 pointGreyApp_registerRecordDeviceDriver(pdbbase) 
 
 # Use this line for the first Point Grey camera in the system
@@ -33,14 +33,12 @@ pointGreyApp_registerRecordDeviceDriver(pdbbase)
 # Use this line for a specific camera by serial number, in this case a BlackFly GigE camera
 #epicsEnvSet("CAM-CONNECT", "13481965")
 #epicsEnvSet("CAM-CONNECT", "16292610")
-epicsEnvSet("CAM-CONNECT", "18402100")
+#epicsEnvSet("CAM-CONNECT", "18402100")
 #epicsEnvSet("CAM-CONNECT", "1624484")
 # Use this line for a specific camera by serial number, in this case a Flea3 GigE camera
 # epicsEnvSet("CAM-CONNECT", "14273040")
 #epicsEnvSet("CAM-CONNECT", "17476170")
 
-# The port name for the detector
-epicsEnvSet("PORT",   "PG1")
 # The search path for database files
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")
 # Define NELEMENTS to be enough for a 2048x2048x3 (color) image
