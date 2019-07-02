@@ -7,7 +7,7 @@ rmdir /s /q dependancyFiles\
 rmdir /s /q startupScripts\
 rmdir /s /q autosaveFiles\
 rmdir /s /q logs\
-rmdir /s /1 .git\
+rmdir /s /q .git\
 
 mkdir autosave
 del README*
