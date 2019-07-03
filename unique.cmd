@@ -1,8 +1,7 @@
-# ###############################
-# Specific to camera            #
-# Date:   2018-08-22            #
-# Author: K. Gofron             #
-# ###############################
+# ########################################
+# File containing Unique IOC parameters  #
+# Author: K. Gofron                      #
+# ########################################
 
 
 # Set this to the folder for support.
@@ -34,12 +33,12 @@ epicsEnvSet("CTPREFIX",                 "XF:10IDC-BI{Lambda-Cam:1}")
 epicsEnvSet("HOSTNAME",                 "xf10idd-ioc3")
 epicsEnvSet("IOCNAME",                  "cam-lambda")
 
-# Imag and data size
+# Image and data size
 epicsEnvSet("QSIZE",                    "30")
 epicsEnvSet("NCHANS",                   "2048")
 epicsEnvSet("HIST_SIZE",                "4096")
-epicsEnvSet("XSIZE",                    "256")
-epicsEnvSet("YSIZE",                    "256")
+epicsEnvSet("XSIZE",                    "1024")
+epicsEnvSet("YSIZE",                    "1024")
 epicsEnvSet("NELMT",                    "65536")
 epicsEnvSet("NDTYPE",                   "Int16")  #'Int8' (8bit B/W, Color) | 'Int16' (16bit B/W)
 epicsEnvSet("NDFTVL",                   "SHORT") #'UCHAR' (8bit B/W, Color) | 'SHORT' (16bit B/W)
