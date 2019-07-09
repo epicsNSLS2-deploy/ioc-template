@@ -14,6 +14,8 @@ rm -rf dependancyFiles/
 rm -rf startupScripts/
 rm -rf autosaveFiles/
 rm -rf logs/
+rm -rf .git
+rm .gitignore
 rm README.md
 mkdir autosave
 rm *OLD*
