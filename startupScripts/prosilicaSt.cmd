@@ -2,7 +2,6 @@
 errlogInit(20000)
 
 < unique.cmd
-#< envPaths
 < /epics/prod/Deb7/R3-4/envPaths
 
 dbLoadDatabase("$(ADPROSILICA)/iocs/prosilicaIOC/dbd/prosilicaApp.dbd")
