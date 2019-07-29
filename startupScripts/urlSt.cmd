@@ -8,20 +8,6 @@ errlogInit(20000)
 dbLoadDatabase("$(ADURL)/iocs/urlIOC/dbd/URLDriverApp.dbd")
 URLDriverApp_registerRecordDeviceDriver(pdbbase) 
 
-# Prefix for all records
-epicsEnvSet("PREFIX", "13URL1:")
-# The port name for the detector
-epicsEnvSet("PORT",   "URL1")
-# The queue size for all plugins
-epicsEnvSet("QSIZE",  "20")
-# The maximim image width; used for row profiles in the NDPluginStats plugin
-epicsEnvSet("XSIZE",  "640")
-# The maximim image height; used for column profiles in the NDPluginStats plugin
-epicsEnvSet("YSIZE",  "480")
-# The maximum number of time series points in the NDPluginStats plugin
-epicsEnvSet("NCHANS", "2048")
-# The maximum number of frames buffered in the NDPluginCircularBuff plugin
-epicsEnvSet("CBUFFS", "500")
 # The search path for database files
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")
 
