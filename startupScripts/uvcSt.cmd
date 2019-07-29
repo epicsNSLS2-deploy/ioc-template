@@ -27,10 +27,9 @@ adUVCApp_registerRecordDeviceDriver(pdbbase)
 
 # If searching for device by serial number, put 0 and 0 for vendor/productID
 # ADUVCConfig(const char* portName, const char* serial, int vendorID, int productID, int framerate, int xsize, int ysize, int maxBuffers, size_t maxMemory, int priority, int stackSize)
-#ADUVCConfig("$(PORT)", "10e536e9e4c4ee70", 0, "$(FRAMERATE)", "$(XSIZE)", "$(YSIZE)", 0, 0, 0, 0)
-#epicsThreadSleep(2)
-
-# If searching for device by product ID put "" or empty string for serial number
+# Uncomment this line if using serial number to connect
+#ADUVCConfig("$(PORT)", "$(CAM-CONNECT", 0, "$(FRAMERATE)", "$(XSIZE)", "$(YSIZE)", 0, 0, 0, 0)
+# Uncomment this line if using product ID to connect
 ADUVCConfig("$(PORT)", "", $(CAM-CONNECT), $(FRAMERATE), $(XSIZE), $(YSIZE), 0, 0, 0, 0)
 epicsThreadSleep(2)
 
