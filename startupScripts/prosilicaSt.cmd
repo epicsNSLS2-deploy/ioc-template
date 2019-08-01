@@ -1,8 +1,9 @@
 #!/epics/prod/Deb7/R3-4/areaDetector/ADProsilica/iocs/prosilicaIOC/bin/linux-x86_64/prosilicaApp
-errlogInit(20000)
 
 < unique.cmd
-< /epics/prod/Deb7/R3-4/envPaths
+errlogInit(20000)
+
+< envPaths
 
 dbLoadDatabase("$(ADPROSILICA)/iocs/prosilicaIOC/dbd/prosilicaApp.dbd")
 prosilicaApp_registerRecordDeviceDriver(pdbbase)
@@ -25,7 +26,6 @@ prosilicaConfig("$(PORT)", "$(CAM-CONNECT)",  50, 0)
 asynSetTraceIOMask("$(PORT)",0,2)
 #asynSetTraceMask("$(PORT)",0,255)
 
-#dbLoadRecords("align.db",   "P=$(PREFIX),R=")
 
 dbLoadRecords("$(ADPROSILICA)/db/prosilica.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 
@@ -43,12 +43,6 @@ dbLoadRecords("$(ADCORE)/db/NDStdArrays.template", "P=$(PREFIX),R=image1:,PORT=I
 < $(ADCORE)/iocBoot/commonPlugins.cmd
 set_requestfile_path("$(ADPROSILICA)/prosilicaApp/Db")
 set_requestfile_path("$(ADPROSILICA)/iocs/prosilicaIOC/iocBoot/iocProsilica")
-
-#system("install -m 777 -d $(TOP)/as/save")
-#system("install -m 777 -d $(TOP)/as/req")
-
-#access security
-#asSetFilename("/cf-update/acf/default.acf")
 
 #asynSetTraceMask("$(PORT)",0,255)
 #asynSetTraceMask("$(PORT)",0,9)

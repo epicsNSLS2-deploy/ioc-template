@@ -7,38 +7,6 @@ errlogInit(20000)
 dbLoadDatabase("$(ADPOINTGREY)/iocs/pointGreyIOC/dbd/pointGreyApp.dbd")
 pointGreyApp_registerRecordDeviceDriver(pdbbase) 
 
-# Use this line for the first Point Grey camera in the system
-#epicsEnvSet("CAM-CONNECT", "0")
-# Use this line for a specific camera by serial number, in this case a Flea2 Firewire camera
-#epicsEnvSet("CAM-CONNECT", "9211601")
-# Use this line for a specific camera by serial number, in this case a Grasshopper3 USB-3.0 camera
-# This is the GSECARS tomography camera
-#epicsEnvSet("CAM-CONNECT", "13510305")
-# This is another GSECARS tomography camera
-#epicsEnvSet("CAM-CONNECT", "15355695")
-# This is another GSECARS tomography camera
-#epicsEnvSet("CAM-CONNECT", "15337483")
-# This is the 13-ID-D Grasshopper3 GigE camera, gse-pointgrey2
-#epicsEnvSet("CAM-CONNECT", "14481221")
-# This is the 13-ID-D Grasshopper3 GigE camera, gse-pointgrey3
-#epicsEnvSet("CAM-CONNECT", "14481209")
-# This is the GSECARS LVP CMOS camera
-#epicsEnvSet("CAM-CONNECT", "14120134")
-# This is the GSECARS LVP CCD camera
-#epicsEnvSet("CAM-CONNECT", "15452742")
-# This is the 2-BM camera
-#epicsEnvSet("CAM-CONNECT", "15355637")
-# This is the 2-BM GS3-U3-91S6M-C camera
-#epicsEnvSet("CAM-CONNECT", "13510309")
-# Use this line for a specific camera by serial number, in this case a BlackFly GigE camera
-#epicsEnvSet("CAM-CONNECT", "13481965")
-#epicsEnvSet("CAM-CONNECT", "16292610")
-#epicsEnvSet("CAM-CONNECT", "18402100")
-#epicsEnvSet("CAM-CONNECT", "1624484")
-# Use this line for a specific camera by serial number, in this case a Flea3 GigE camera
-# epicsEnvSet("CAM-CONNECT", "14273040")
-#epicsEnvSet("CAM-CONNECT", "17476170")
-
 # The search path for database files
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")
 # Define NELEMENTS to be enough for a 2048x2048x3 (color) image

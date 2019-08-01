@@ -1,22 +1,22 @@
 #!/epics/bin/spinnakerApp
 
 < unqiue.cmd
-< envPaths
 errlogInit(20000)
 
-dbLoadDatabase("$(TOP)/dbd/spinnakerApp.dbd")
+< envPaths
+
+dbLoadDatabase("$(ADSPINNAKER)/iocs/spinnakerIOC/dbd/spinnakerApp.dbd")
 spinnakerApp_registerRecordDeviceDriver(pdbbase) 
 
 
 # Define NELEMENTS to be enough for a 2048x2048x3 (color) image
 epicsEnvSet("NELEMENTS", "12592912")
-epicsEnvSet("CAMERA_ID", 0)
 # Add spinnaker db to include path
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(EPICS_DB_INCLUDE_PATH);$(ADSPINNAKER)/db")
 
 # ADSpinnakerConfig(const char *portName, const char *cameraId, int traceMask, int memoryChannel,
 #                 int maxBuffers, size_t maxMemory, int priority, int stackSize)
-ADSpinnakerConfig("$(PORT)", $(CAM-CONNECT), 0x1, 0)
+ADSpinnakerConfig("$(PORT)", "$(CAM-CONNECT)", 0x1, 0)
 
 asynSetTraceIOMask($(PORT), 0, 2)
 # Set ASYN_TRACE_WARNING and ASYN_TRACE_ERROR

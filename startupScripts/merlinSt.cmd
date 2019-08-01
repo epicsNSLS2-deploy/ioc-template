@@ -1,27 +1,15 @@
 #!/epics/bin/merlinApp
 
 < unique.cmd
-< envPaths
-
 errlogInit(20000)
 
-dbLoadDatabase("$(TOP)/dbd/merlinApp.dbd")
+< envPaths
+
+dbLoadDatabase("$(ADMERLIN)/iocs/merlinIOC/dbd/merlinApp.dbd")
 
 merlinApp_registerRecordDeviceDriver(pdbbase) 
 
-
-# The name of the drvAsynIPPort for commands
-epicsEnvSet("COMMAND_PORT", "$(PORT)cmd")
-# The name of the drvAsynIPPort for data
-epicsEnvSet("DATA_PORT", "$(PORT)data")
-# The IP address of the Merlin Labview system
-epicsEnvSet("MERLIN_IP", "164.54.160.214")
-# The IP port for the command socket
-epicsEnvSet("COMMAND_IPPORT", "6341")
-# The IP port for the data socket
-epicsEnvSet("DATA_IPPORT",    "6342")
-# The model type for this Medipix detector
-epicsEnvSet("MODEL", "3")   #0=Merlin, 1=MedipixXBPM, 2=UomXBPM, 3=MerlinQuad
+< merlinConfig.cmd
 
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", "$(ADCORE)/db")
 

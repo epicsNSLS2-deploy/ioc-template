@@ -1,8 +1,9 @@
 #!/epics/prod/Deb8/master/areaDetector/ADAndor3/iocs/andor3IOC/bin/linux-x86_64/andor3App
+
+< unique.cmd
 errlogInit(20000)
 
-< /epics/prod/Deb8/master/envPaths
-< unique.cmd
+< envPaths
 
 dbLoadDatabase("$(ADANDOR3)/iocs/andor3IOC/dbd/andor3App.dbd")
 andor3App_registerRecordDeviceDriver(pdbbase) 
@@ -17,8 +18,6 @@ asynSetTraceIOMask("$(PORT)",0,2)
 #asynSetTraceMask("$(PORT)",0,255)
 
 
-
-
 # Create a standard arrays plugin, set it to get data from first Andor Neo driver.
 NDStdArraysConfigure("Image1", 5, 0, "$(PORT)", 0, 0)
 
@@ -31,8 +30,6 @@ dbLoadRecords("$(ADCORE)/db/NDStdArrays.template", "P=$(PREFIX),R=image1:,PORT=I
 
 # Load all other plugins using commonPlugins.cmd
 < $(ADCORE)/iocBoot/commonPlugins.cmd
-#set_requestfile_path("$(ADPROSILICA)/prosilicaApp/Db")
-#set_requestfile_path("$(ADPROSILICA)/iocs/prosilicaIOC/iocBoot/iocProsilica")
 set_requestfile_path("$(ADANDOR3)/andor3App/Db")
 set_requestfile_path("$(ADANDOR3)/iocs/andor3IOC/iocBoot/iocAndor3")
 

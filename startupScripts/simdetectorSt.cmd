@@ -57,19 +57,7 @@ dbLoadRecords("NDStdArrays.template", "P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,
 # Load all other plugins using commonPlugins.cmd
 < $(ADCORE)/iocBoot/commonPlugins.cmd
 
-# Create a standard arrays plugin, set it to get data from FFT plugin.
-#NDStdArraysConfigure("Image2", 3, 0, "FFT1", 0)
-# This waveform allows transporting 64-bit images, so it can handle any detector data type at the expense of more memory and bandwidth
-#dbLoadRecords("NDStdArrays.template", "P=$(PREFIX),R=image2:,PORT=Image2,ADDR=0,TIMEOUT=1,NDARRAY_PORT=FFT1,TYPE=Float64,FTVL=DOUBLE,NELEMENTS=12000000")
-
 set_requestfile_path("$(ADSIMDETECTOR)/simDetectorApp/Db")
-
-#asynSetTraceIOMask("$(PORT)",0,2)
-#asynSetTraceMask("$(PORT)",0,255)
-#asynSetTraceIOMask("FileNetCDF",0,2)
-#asynSetTraceMask("FileNetCDF",0,255)
-#asynSetTraceMask("FileNexus",0,255)
-#asynSetTraceMask("SIM2",0,255)
 
 iocInit()
 

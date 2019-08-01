@@ -1,12 +1,11 @@
 #!/epics/bin/pilatusApp
 
-
 < unique.cmd
-< envPaths
-
 errlogInit(20000)
 
-dbLoadDatabase("$(TOP)/dbd/pilatusDetectorApp.dbd")
+< envPaths
+
+dbLoadDatabase("$(ADPILATUS)/iocs/pilatusIOC/dbd/pilatusDetectorApp.dbd")
 pilatusDetectorApp_registerRecordDeviceDriver(pdbbase) 
 
 

@@ -5,7 +5,7 @@ errlogInit(20000)
 
 < envPaths
 
-dbLoadDatabase("$(TOP)/dbd/PerkinElmerApp.dbd")
+dbLoadDatabase("$(ADPERKINELMER)/iocs/perkinElmerIOC/dbd/PerkinElmerApp.dbd")
 PerkinElmerApp_registerRecordDeviceDriver(pdbbase) 
 
 
