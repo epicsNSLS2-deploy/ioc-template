@@ -20,4 +20,3 @@ rm README.md
 mkdir autosave
 rm *OLD*
 rm cleanup.bat
-rm cleanup.sh
