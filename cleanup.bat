@@ -14,4 +14,3 @@ del README*
 del .gitignore
 del *OLD*
 del cleanup.sh
-del cleanup.bat
