@@ -32,3 +32,4 @@ epicsEnvSet("ADPOINTGREY",    "$(AREA_DETECTOR)/ADPointGrey")
 epicsEnvSet("ADUVC",          "$(AREA_DETECTOR)/ADUVC")
 epicsEnvSet("ADURL",          "$(AREA_DETECTOR)/ADURL")
 epicsEnvSet("ADSPINNAKER",    "$(AREA_DETECTOR)/ADSpinnaker")
+
