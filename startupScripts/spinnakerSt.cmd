@@ -1,6 +1,6 @@
 #!/epics/bin/spinnakerApp
 
-< unqiue.cmd
+< unique.cmd
 errlogInit(20000)
 
 < envPaths
