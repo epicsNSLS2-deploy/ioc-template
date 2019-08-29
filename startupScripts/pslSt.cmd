@@ -8,13 +8,6 @@ errlogInit(20000)
 dbLoadDatabase("$(ADPSL)/iocs/pslIOC/dbd/PSLApp.dbd")
 PSLApp_registerRecordDeviceDriver(pdbbase) 
 
-epicsEnvSet("PREFIX", "13PSL1:")
-epicsEnvSet("PORT",   "PSL")
-epicsEnvSet("QSIZE",  "20")
-epicsEnvSet("XSIZE",  "4007")
-epicsEnvSet("YSIZE",  "2670")
-epicsEnvSet("NCHANS", "2048")
-
 ###
 # Create the asyn port to talk to the PSL server on port 50000
 #drvAsynIPPortConfigure("PSLServer","rivers-mobile2:50000", 0, 0, 0) 
