@@ -1,6 +1,5 @@
 # ########################################
-# File containing Unique IOC parameters  #
-# Author: K. Gofron                      #
+# File containing Unique IOC parameters  #                             
 # ########################################
 
 
@@ -11,10 +10,10 @@
 epicsEnvSet("SUPPORT_DIR", "/epics/Deb8")
 
 # Maintainer
-epicsEnvSet("ENGINEER",                 "K. Gofron X5283")
+epicsEnvSet("ENGINEER",                 "J. Wlodek")
 
 # IOC Information
-epicsEnvSet("PORT",                     "LAMBDA1")
+epicsEnvSet("PORT",                     "CAM1")
 epicsEnvSet("IOC",                      "iocADUVC")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST",  "NO")
@@ -23,8 +22,6 @@ epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "6000000")
 
 # Identify which connection camera IOC uses
 epicsEnvSet("CAM-CONNECT",                   "25344")
-#epicsEnvSet("CAM-CONNECT",                   "10.10.1.91")
-#epicsEnvSet("CAM-CONNECT",	"/opt/xsp/config")
 
 
 # PV and IOC Name configs
@@ -44,5 +41,5 @@ epicsEnvSet("NDTYPE",                   "Int16")  #'Int8' (8bit B/W, Color) | 'I
 epicsEnvSet("NDFTVL",                   "SHORT") #'UCHAR' (8bit B/W, Color) | 'SHORT' (16bit B/W)
 epicsEnvSet("CBUFFS",                   "500")
 
-# The framerate at which the stream will operate (used by UVC camera)
+# The framerate at which the stream will operate (used by ADUVC cameras)
 epicsEnvSet("FRAMERATE",                "30");
