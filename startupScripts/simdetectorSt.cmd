@@ -34,10 +34,6 @@ simDetectorConfig("$(PORT)", $(XSIZE), $(YSIZE), 1, 0, 0)
 #dbLoadRecords("simDetector.template",     "P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1,RATE_SMOOTH=0.2")
 dbLoadRecords("$(ADSIMDETECTOR)/db/simDetector.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
 
-# Create a second simDetector driver
-simDetectorConfig("SIM2", 300, 200, 1, 50, 50000000)
-dbLoadRecords("$(ADSIMDETECTOR)/db/simDetector.template","P=$(PREFIX),R=cam2:,PORT=SIM2,ADDR=0,TIMEOUT=1")
-
 # Load an NDFile database.  This is not supported for the simDetector which does not write files.
 #dbLoadRecords("NDFile.template","P=$(PREFIX),R=cam1:,PORT=SIM1,ADDR=0,TIMEOUT=1")
 
