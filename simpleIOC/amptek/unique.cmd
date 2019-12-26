@@ -20,6 +20,8 @@ epicsEnvSet("ENGINEER",                 "K. Gofron X5283")
 epicsEnvSet("LOCATION",                 "10IDD")
 epicsEnvSet("PORT",                     "CAM")
 
+epicsEnvSet("SUPPORT_DIR", "/ad-nfs/epics/prod/Deb7/production")
+
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST",  "NO")
 epicsEnvSet("EPICS_CA_ADDR_LIST",       "10.10.0.255")
 epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "6000000")
