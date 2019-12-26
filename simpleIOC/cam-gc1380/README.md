@@ -4,7 +4,7 @@ A simple template used for installing areaDetector IOCs with NSLS2 prebuilt bina
 
 ### Included components
 
-Component   |       Description    |
+Component   |       Description    |  Location
 ------------|----------------------|----
 unique.cmd | The IOC specific variables | /epics/iocs/cam-bpm1
 envPaths | Relative paths to EPICS components | /epics/iocs/cam-bpm1 (but prefer central location)
