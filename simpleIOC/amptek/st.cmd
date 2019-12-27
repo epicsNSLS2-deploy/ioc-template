@@ -1,4 +1,5 @@
 #!/home/kgofron/src/epics/support/mca/bin/linux-x86_64/mcaAmptekApp st.cmd
+< unique.cmd
 < envPaths
 
 epicsEnvSet(STARTUP,$(TOP)/iocBoot/$(IOC))
